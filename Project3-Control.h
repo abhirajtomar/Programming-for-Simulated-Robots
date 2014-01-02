@@ -12,13 +12,6 @@
  */
 
 
-////PROJECT 3, LEVEL 1, Change number of wumpuses and number of pits in Project3.cpp to 0
-////PROJECT 3, LEVEL 2, Change number of wumpuses to 0 and number of pits to > 0 in Project3.cpp
-////PROJECT 3, LEVEL 3, Change number of wumpuses to > 0 and number of pits to > 0 in Project3.cpp.
-////PROJECT 3, LEVEL 4, Change number of wumpuses to > 0 and number of pits to > 0 and pass true for shootingNoise in Project3.cpp
-////PROJECT 3, POSSIBLE LEVEL 4, TBD
-
-
 /* ----------------------------------------- DO NOT MODIFY ------------------------------------------------------*/
 #include "ModuleProgram.h"
 #include "WheelbotModule.h"
@@ -670,10 +663,7 @@ public:
     }
     
     /* -------------------------------- END DO NOT MODIFY ------------------------------------------*/
-
     
-    
-    //Implementation of A* that you may choose to use or not use
     Node* AStar(int startNode, Graph graphObject) {
 		//cout<<"\nJust Inside A Star";
         priority_queue<Node*, vector<Node*>, CompareNode> open;
@@ -908,38 +898,6 @@ public:
         /* -------------------------------- END DO NOT MODIFY -------------------------------------------- */
         
 
-		/*
-        //In this project, you can take the action ACTION_SHOOT and a movement action simultaneously
-        //When you shoot, the Wumpus hears it and moves randomly. You cannot count on the Wumpus being in the same place throughout your exploration!!!!!
-        takeAction(ACTION_STOP);
-        //For the shoot action, you give it a direction and a distance to shoot. You can shoot in any direction, no matter your orientation
-        //When you come across a Wumpus, you will know how far to shoot by reading the magnitude of the smells.
-        
-        PxVec2 direction(shootResampler(), shootResampler());
-        direction.normalize();
-        if (this->programCounter % 60 == 0)takeAction(ACTION_SHOOT, direction, 5.0);
-        cout<<"At A Node?: "<<(atANode() ? "True" : "False")<<endl;
-        vector<PxVec2> actionsForCurrentNode = getActionVectorsForCurrentNode();
-        vector<float> smells = getCurrentSmells();
-        vector<float> winds = getCurrentWinds();
-        for (int i=0; i<actionsForCurrentNode.size(); i++) {
-            cout<<"Action "<<i<<": ("<<actionsForCurrentNode[i].x<<", "<<actionsForCurrentNode[i].y<<")"<<endl;
-            cout<<"Wind "<<i<<": "<<winds[i]<<endl;
-            cout<<"Smell "<<i<<": "<<smells[i]<<endl;
-        }
-        if (this->programCounter == 0){
-            //Learn an initial node
-            learnedG.graphPoints.push_back(getCurrentNode());
-            //Learn a RANDOM new node and edge. NOTE: This is FOR ILLUSTRATION PURPOSES ONLY. When you code your solution, you need to learn the nodes and edges of the actual
-            //map. When you learn a new node, use the getCurrentNode() function to place the node appropriately. You can only learn nodes that you actually visit (or can infer, in
-            //the case of pits)
-            learnedG.graphPoints.push_back((PxTransform(getCurrentNode())*PxTransform(PxVec3(5,0,0))).p);
-            learnedG.graphEdges.push_back(pair<int, int>(1, 0));
-            cout<<"Adding New Node At: ("<<getCurrentNode().x<<", "<<getCurrentNode().y<<", "<<getCurrentNode().z<<")"<<endl;
-        }
-		*/
-
-		//***Code Starts Here***
 		
 		if(allExplored == true){
 			//cout<<"\nSuccess: The whole map has been Explored";

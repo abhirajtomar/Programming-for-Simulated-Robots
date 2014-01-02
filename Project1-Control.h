@@ -188,13 +188,6 @@ public:
         //4. Right: Move Wheelbot right. To perform this action call, takeAction(ACTION_RIGHT)
         //5. Stop: Stop Wheelbot. To perform this action call, takeAction(ACTION_STOP)
         
-        ///FILL IN THIS PART OF THE CODE - THE CODE BELOW IS SIMPLY A PLACEHOLDER ILLUSTRATING HOW TO EXECUTE ACTIONS AND READ SENSORS
-        //1. Determine how to reach the goal using the given sensors and actions
-        //2. Stop when you have reached the goal within a tolerance of currentGoalRadius, a constant defined above
-        //3. Print the color of the goal object to the screen.
-    
-		//***Abhiraj Pratap Singh Tomar
-		//***CSCI 561
 
 		//Getting positions of goal and bot
 		PxTransform pose = getCurrentWheelbotPose();

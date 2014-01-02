@@ -1,10 +1,4 @@
-//
-//  Project2-Control.h
-//  ReMod3D
-//
-//  Created by Thomas Collins on 9/21/13.
-//
-//
+
 
 #ifndef ReMod3D_Project2_Control_h
 #define ReMod3D_Project2_Control_h
@@ -353,24 +347,7 @@ public:
         this->numActions = 4;
         ///END DO NOT MODIFY------------------///
         
-        ///TODO:
-        ////1. Plan a least cost path to the goal using the actual distances between nodes (cities) and the
-        ////straight-line distance heuristic.
-        ////2. Execute the plan until you detect a road block (red obstacle) with your range sensor.
-        ////3. If you detect an obstacle, update the map using this new knowledge and return to the previous
-        ////city (the one that you just left).
-        ////4. Update the map (this->g) with the knowledge that this link is no longer traversible or has a different
-        ////cost than was originally thought. NOTE: obstacles will never disappear. All obstacles stay exactly where they
-        ////are throughout the course of the project run. They will, in general, change between runs, though.
-        ////5. Replan from the city you returned to based on the updated map (using A*)
-        ////6. Continue doing the above steps until you encounter one of two conditions:
-        ////   a. You reach the final goal city. In this case, you should stop and declare "Success"
-        ////   b. You have exhausted all possible paths to the goal city and all are blocked. In this case, you
-        ////   should stop and declare "Failure".
         
-        //Check to see if I have planned yet. I don't want to plan each time step is called, only when I
-        //am done executing my plan or when an obstacle forces me to replan.
-
 		// Check if goal has been reached
 		if(goalReached == 1){
 			cout<<"\nSuccess: Goal Reached";
